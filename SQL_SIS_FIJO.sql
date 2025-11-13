@@ -125,7 +125,7 @@ VALUES
 (3, 'lsanchez', 'abc789', 1);
 GO
 
-SELECT IDPersona, NombreUsuario
+SELECT IDUsuario, NombreUsuario
 FROM tbUsuario
 WHERE NombreUsuario LIKE 'L%'
   AND IDUsuario <> 1

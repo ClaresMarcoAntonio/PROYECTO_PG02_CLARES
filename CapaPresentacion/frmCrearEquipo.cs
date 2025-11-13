@@ -43,8 +43,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error: " + ex);
             }
-
-
         }
 
         private void frmCrearEquipo_Load(object sender, EventArgs e)

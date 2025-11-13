@@ -16,7 +16,7 @@ namespace CapaDatos
 
             using (SqlConnection connection = clsConexion_CD.mtdObtenerConexion())
             {
-                string queryBuscarUsuarios = @"SELECT IDPersona, NombreUsuario
+                string queryBuscarUsuarios = @"SELECT IDUsuario, NombreUsuario
                                                FROM tbUsuario
                                                WHERE NombreUsuario LIKE @NombreUsuario + '%'
                                                AND IDUsuario <> @IDUsuarioActual
