@@ -32,11 +32,11 @@
             this.lblNombreEquipo = new System.Windows.Forms.Label();
             this.txtNombreEquipo = new System.Windows.Forms.TextBox();
             this.dpbDatosEquipo = new System.Windows.Forms.GroupBox();
+            this.btnCrearEquipo = new System.Windows.Forms.Button();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblCreador = new System.Windows.Forms.Label();
             this.txtCreador = new System.Windows.Forms.TextBox();
-            this.btnCrearEquipo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblLogo = new System.Windows.Forms.Label();
             this.btnSubirFoto = new System.Windows.Forms.Button();
@@ -87,6 +87,16 @@
             this.dpbDatosEquipo.TabStop = false;
             this.dpbDatosEquipo.Text = "Datos del Equipo";
             // 
+            // btnCrearEquipo
+            // 
+            this.btnCrearEquipo.Location = new System.Drawing.Point(19, 242);
+            this.btnCrearEquipo.Name = "btnCrearEquipo";
+            this.btnCrearEquipo.Size = new System.Drawing.Size(75, 23);
+            this.btnCrearEquipo.TabIndex = 64;
+            this.btnCrearEquipo.Text = "Crear Equipo";
+            this.btnCrearEquipo.UseVisualStyleBackColor = true;
+            this.btnCrearEquipo.Click += new System.EventHandler(this.btnCrearEquipo_Click);
+            // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
@@ -120,16 +130,6 @@
             this.txtCreador.ReadOnly = true;
             this.txtCreador.Size = new System.Drawing.Size(226, 20);
             this.txtCreador.TabIndex = 64;
-            // 
-            // btnCrearEquipo
-            // 
-            this.btnCrearEquipo.Location = new System.Drawing.Point(19, 242);
-            this.btnCrearEquipo.Name = "btnCrearEquipo";
-            this.btnCrearEquipo.Size = new System.Drawing.Size(75, 23);
-            this.btnCrearEquipo.TabIndex = 64;
-            this.btnCrearEquipo.Text = "Crear Equipo";
-            this.btnCrearEquipo.UseVisualStyleBackColor = true;
-            this.btnCrearEquipo.Click += new System.EventHandler(this.btnCrearEquipo_Click);
             // 
             // groupBox1
             // 
@@ -173,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 756);
+            this.ClientSize = new System.Drawing.Size(754, 401);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dpbDatosEquipo);
             this.Controls.Add(this.lblTitulo);

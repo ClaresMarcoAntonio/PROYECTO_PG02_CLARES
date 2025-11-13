@@ -92,8 +92,6 @@ CREATE TABLE tbInvitacionEquipo(
 );
 GO
 
-SELECT * FROM tbInvitacionEquipo
-
 
 -- INSERTAR REGISTROS A LA TABLA tbTipoDocumento
 INSERT INTO tbTipoDocumento (TipoDocumento)
@@ -108,3 +106,27 @@ GO
 SELECT * FROM tbUsuario
 SELECT * FROM tbPersona
 SELECT * FROM tbEquipo
+SELECT * FROM tbInvitacionEquipo
+
+
+
+INSERT INTO tbPersona
+(Nombres, ApellidoPaterno, ApellidoMaterno, IDTipoDocumento, Documento, FechaNacimiento, Telefono, Correo, Genero)
+VALUES
+('Juan Carlos', 'Pérez', 'Gómez', 1, '12345678', '1990-05-12', '987654321', 'juan.perez@example.com', 'M'),
+('María Luisa', 'Ramírez', 'Torres', 2, 'E1234567', '1987-11-23', '912345678', 'maria.ramirez@example.com', 'F'),
+('Luis Alberto', 'Sánchez', 'Flores', 3, 'PA987654', '1995-03-07', NULL, 'luis.sanchez@example.com', 'M');
+GO
+
+INSERT INTO tbUsuario (IDPersona, NombreUsuario, Clave, Estado)
+VALUES
+(1, 'jperez', 'clave123', 1),
+(2, 'mramirez', 'pass456', 1),
+(3, 'lsanchez', 'abc789', 1);
+GO
+
+SELECT IDPersona, NombreUsuario
+FROM tbUsuario
+WHERE NombreUsuario LIKE 'L%'
+  AND IDUsuario <> 1
+  AND Estado = 1;

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.gpbUsuarioInvitado = new System.Windows.Forms.GroupBox();
-            this.lblNomUsuario = new System.Windows.Forms.Label();
-            this.txtNomUsuario = new System.Windows.Forms.TextBox();
-            this.txtEquipo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.txtUsuarioInvitado = new System.Windows.Forms.TextBox();
             this.lblUsuarioInvitado = new System.Windows.Forms.Label();
+            this.dgvUsuario = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtNomUsuario = new System.Windows.Forms.TextBox();
+            this.lblNomUsuario = new System.Windows.Forms.Label();
+            this.txtEquipo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gpbUsuarioInvitado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
@@ -56,55 +56,6 @@
             this.gpbUsuarioInvitado.TabStop = false;
             this.gpbUsuarioInvitado.Text = "Usuario Invitado";
             // 
-            // lblNomUsuario
-            // 
-            this.lblNomUsuario.AutoSize = true;
-            this.lblNomUsuario.Location = new System.Drawing.Point(41, 36);
-            this.lblNomUsuario.Name = "lblNomUsuario";
-            this.lblNomUsuario.Size = new System.Drawing.Size(98, 13);
-            this.lblNomUsuario.TabIndex = 0;
-            this.lblNomUsuario.Text = "Nombre de Usuario";
-            // 
-            // txtNomUsuario
-            // 
-            this.txtNomUsuario.Location = new System.Drawing.Point(155, 33);
-            this.txtNomUsuario.Name = "txtNomUsuario";
-            this.txtNomUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtNomUsuario.TabIndex = 1;
-            // 
-            // txtEquipo
-            // 
-            this.txtEquipo.Location = new System.Drawing.Point(183, 43);
-            this.txtEquipo.Name = "txtEquipo";
-            this.txtEquipo.Size = new System.Drawing.Size(100, 20);
-            this.txtEquipo.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID EQUIPO";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(180, 70);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // dgvUsuario
-            // 
-            this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuario.Location = new System.Drawing.Point(44, 99);
-            this.dgvUsuario.Name = "dgvUsuario";
-            this.dgvUsuario.Size = new System.Drawing.Size(211, 88);
-            this.dgvUsuario.TabIndex = 3;
-            // 
             // txtUsuarioInvitado
             // 
             this.txtUsuarioInvitado.Location = new System.Drawing.Point(155, 193);
@@ -122,16 +73,67 @@
             this.lblUsuarioInvitado.TabIndex = 4;
             this.lblUsuarioInvitado.Text = "IDUsuarioInvitado";
             // 
+            // dgvUsuario
+            // 
+            this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuario.Location = new System.Drawing.Point(44, 99);
+            this.dgvUsuario.Name = "dgvUsuario";
+            this.dgvUsuario.Size = new System.Drawing.Size(211, 88);
+            this.dgvUsuario.TabIndex = 3;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(180, 70);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtNomUsuario
+            // 
+            this.txtNomUsuario.Location = new System.Drawing.Point(155, 33);
+            this.txtNomUsuario.Name = "txtNomUsuario";
+            this.txtNomUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtNomUsuario.TabIndex = 1;
+            // 
+            // lblNomUsuario
+            // 
+            this.lblNomUsuario.AutoSize = true;
+            this.lblNomUsuario.Location = new System.Drawing.Point(41, 36);
+            this.lblNomUsuario.Name = "lblNomUsuario";
+            this.lblNomUsuario.Size = new System.Drawing.Size(98, 13);
+            this.lblNomUsuario.TabIndex = 0;
+            this.lblNomUsuario.Text = "Nombre de Usuario";
+            // 
+            // txtEquipo
+            // 
+            this.txtEquipo.Location = new System.Drawing.Point(183, 43);
+            this.txtEquipo.Name = "txtEquipo";
+            this.txtEquipo.Size = new System.Drawing.Size(100, 20);
+            this.txtEquipo.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(69, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ID EQUIPO";
+            // 
             // frmInvitarUsuarioEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 450);
+            this.ClientSize = new System.Drawing.Size(340, 363);
             this.Controls.Add(this.txtEquipo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gpbUsuarioInvitado);
             this.Name = "frmInvitarUsuarioEquipo";
             this.Text = "frmInvitarUsuarioEquipo";
+            this.Load += new System.EventHandler(this.frmInvitarUsuarioEquipo_Load);
             this.gpbUsuarioInvitado.ResumeLayout(false);
             this.gpbUsuarioInvitado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();

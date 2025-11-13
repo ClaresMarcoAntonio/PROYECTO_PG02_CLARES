@@ -22,6 +22,7 @@ namespace CapaPresentacion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            //VALORES
             string correo = txtCorreo.Text;
             string clave = txtContraseña.Text;
 
@@ -38,16 +39,13 @@ namespace CapaPresentacion
                 var GuardarUsuario = ObjCredenciales.mtdObtenerUsuarioCN(correo, clave); //GUARDAR LA INFORMACION DEL USUARIO PARA EL USO DEL SISTEMA
 
                 if (ValidarCredencial)
-                {
-                    MessageBox.Show("Credenciales Correctas", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                {                    
                     //GUADAR EL USUARIO EN UNA CLASE GLOBAL STATIC
                     clsSesionUsuario_CN.idUsuario = GuardarUsuario.idUsuario;
                     clsSesionUsuario_CN.NombreUsuario = GuardarUsuario.nombreUsuario;
 
                     frmPaginaPrincipal crearEquipo = new frmPaginaPrincipal();
                     crearEquipo.ShowDialog();
-
                 }
                 else
                 {
@@ -60,23 +58,12 @@ namespace CapaPresentacion
             }
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
-        {
-        //    frmCrearCuenta CrearCuenta = new frmCrearCuenta();
-         //   CrearCuenta.ShowDialog();
-        }
-
-        private void frmInicioSesion_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void ptbCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmCrearCuenta CrearCuenta = new frmCrearCuenta();
             CrearCuenta.ShowDialog();

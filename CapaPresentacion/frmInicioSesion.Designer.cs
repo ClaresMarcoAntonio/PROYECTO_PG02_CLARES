@@ -38,7 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptbCerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnkCrearCuenta = new System.Windows.Forms.LinkLabel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).BeginInit();
@@ -138,18 +138,18 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // linkLabel1
+            // lnkCrearCuenta
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Chartreuse;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(95, 471);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(100, 13);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿No tienes cuenta?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnkCrearCuenta.ActiveLinkColor = System.Drawing.Color.Chartreuse;
+            this.lnkCrearCuenta.AutoSize = true;
+            this.lnkCrearCuenta.LinkColor = System.Drawing.Color.White;
+            this.lnkCrearCuenta.Location = new System.Drawing.Point(95, 471);
+            this.lnkCrearCuenta.Name = "lnkCrearCuenta";
+            this.lnkCrearCuenta.Size = new System.Drawing.Size(100, 13);
+            this.lnkCrearCuenta.TabIndex = 10;
+            this.lnkCrearCuenta.TabStop = true;
+            this.lnkCrearCuenta.Text = "¿No tienes cuenta?";
+            this.lnkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCrearCuenta_LinkClicked);
             // 
             // checkBox1
             // 
@@ -169,7 +169,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(63)))), ((int)(((byte)(105)))));
             this.ClientSize = new System.Drawing.Size(303, 514);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lnkCrearCuenta);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnIngresar);
@@ -181,7 +181,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).EndInit();
@@ -202,7 +201,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox ptbCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnkCrearCuenta;
         private System.Windows.Forms.CheckBox checkBox1;
     }
 }

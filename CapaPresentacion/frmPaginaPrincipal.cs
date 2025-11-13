@@ -35,10 +35,17 @@ namespace CapaPresentacion
 
         private void btnInvitar_Click(object sender, EventArgs e)
         {
-            frmInvitarUsuarioEquipo frmInvitar = new frmInvitarUsuarioEquipo();
+            if (string.IsNullOrEmpty(txtIDEquipo.Text))
+            {
+                MessageBox.Show("Selecione un equipo");
+                return;
+            }
+
+            string IDEquipo = txtIDEquipo.Text;
+
+            //PASAR EL DATO DEL IDEQUIPO AL FORMULARIO PARA INVITAR USUARIOS AL EQUIPO
+            frmInvitarUsuarioEquipo frmInvitar = new frmInvitarUsuarioEquipo(IDEquipo);
             frmInvitar.ShowDialog();
-            
-            MessageBox.Show("El id es: " + txtIDEquipo.Text);
         }
 
         private void dgvEquiposUsuario_CellClick(object sender, DataGridViewCellEventArgs e)

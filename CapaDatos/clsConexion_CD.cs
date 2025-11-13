@@ -9,7 +9,7 @@ namespace CapaDatos
 {
     public static class clsConexion_CD
     {
-        private static readonly string connectionString = @"server = DESKTOP-HL9CJGB\MSSQLSERVER2022; 
+        private static readonly string connectionString = @"server = DESKTOP-O13P0GC; 
                                                             database= PRUEBADEPORTE; 
                                                             integrated security = true";
 
