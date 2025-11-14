@@ -78,10 +78,10 @@ GO
 
 -- TABLA DE INVITACIONES
 CREATE TABLE tbInvitacionEquipo(
-	idInvitacion INT IDENTITY(1,1) PRIMARY KEY,
-	idEquipo INT NOT NULL,
-	idUsuarioInvitado INT NOT NULL,
-	idUsuarioEmisor INT NOT NULL,  -- EL QUE ENVIA LA INVITACION (CREADOR DE EQUIPO)
+	IdInvitacion INT IDENTITY(1,1) PRIMARY KEY,
+	IdEquipo INT NOT NULL,
+	IdUsuarioInvitado INT NOT NULL,
+	IdUsuarioEmisor INT NOT NULL,  -- EL QUE ENVIA LA INVITACION (CREADOR DE EQUIPO)
 	FechaInvitacion DATETIME DEFAULT GETDATE(),
 	EstadoInvitacion VARCHAR(20) DEFAULT 'Pendiente' 
 		-- 'Pendiente', 'Aceptada', 'Rechazada'

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gpbUsuarioInvitado = new System.Windows.Forms.GroupBox();
+            this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.txtUsuarioInvitado = new System.Windows.Forms.TextBox();
             this.lblUsuarioInvitado = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.lblNomUsuario = new System.Windows.Forms.Label();
             this.txtEquipo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.btnInvitar = new System.Windows.Forms.Button();
             this.gpbUsuarioInvitado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
@@ -56,6 +56,18 @@
             this.gpbUsuarioInvitado.TabIndex = 0;
             this.gpbUsuarioInvitado.TabStop = false;
             this.gpbUsuarioInvitado.Text = "Usuario Invitado";
+            // 
+            // dgvUsuario
+            // 
+            this.dgvUsuario.AllowUserToAddRows = false;
+            this.dgvUsuario.AllowUserToDeleteRows = false;
+            this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuario.Location = new System.Drawing.Point(32, 99);
+            this.dgvUsuario.Name = "dgvUsuario";
+            this.dgvUsuario.ReadOnly = true;
+            this.dgvUsuario.Size = new System.Drawing.Size(350, 76);
+            this.dgvUsuario.TabIndex = 6;
+            this.dgvUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellClick);
             // 
             // txtUsuarioInvitado
             // 
@@ -116,18 +128,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ID EQUIPO";
             // 
-            // dgvUsuario
-            // 
-            this.dgvUsuario.AllowUserToAddRows = false;
-            this.dgvUsuario.AllowUserToDeleteRows = false;
-            this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuario.Location = new System.Drawing.Point(32, 99);
-            this.dgvUsuario.Name = "dgvUsuario";
-            this.dgvUsuario.ReadOnly = true;
-            this.dgvUsuario.Size = new System.Drawing.Size(350, 76);
-            this.dgvUsuario.TabIndex = 6;
-            this.dgvUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellClick);
-            // 
             // btnInvitar
             // 
             this.btnInvitar.Location = new System.Drawing.Point(353, 342);
@@ -136,6 +136,7 @@
             this.btnInvitar.TabIndex = 4;
             this.btnInvitar.Text = "Invitar";
             this.btnInvitar.UseVisualStyleBackColor = true;
+            this.btnInvitar.Click += new System.EventHandler(this.btnInvitar_Click);
             // 
             // frmInvitarUsuarioEquipo
             // 

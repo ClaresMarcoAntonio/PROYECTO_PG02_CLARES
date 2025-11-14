@@ -33,6 +33,7 @@ namespace CapaDatos
             }
         }
 
+
         //METODO PARA LISTAR LOS EQUIPOS CREADOS POR EL USUARIO
         public DataTable mtdListarEquiposPorUsuarioCD(int IDCreador)
         {
@@ -65,6 +66,26 @@ namespace CapaDatos
             }
 
             return tbEquipos;
+        }
+
+        public void mtdInvitarUsuarioEquipo_CD(int IdEquipo, int IdUsuarioInvitado, int IdUsuarioEmisor)
+        {
+            using (SqlConnection connection = clsConexion_CD.mtdObtenerConexion())
+            {
+                connection.Open();
+
+                string queryInvitarUsuario = @"INSERT INTO tbInvitacionEquipo (IdEquipo, IdUsuarioInvitado, IdUsuarioEmisor)
+                                               VALUES (@IdEquipo, @IdUsuarioInvitado, @IdUsuarioEmisor);";
+
+                using (SqlCommand cmdInvitarUsuario = new SqlCommand(queryInvitarUsuario, connection))
+                {
+                    cmdInvitarUsuario.Parameters.AddWithValue("@IdEquipo", IdEquipo);
+                    cmdInvitarUsuario.Parameters.AddWithValue("@IdUsuarioInvitado", IdUsuarioInvitado);
+                    cmdInvitarUsuario.Parameters.AddWithValue("@IdUsuarioEmisor", IdUsuarioEmisor);
+
+                    cmdInvitarUsuario.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

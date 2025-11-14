@@ -25,7 +25,11 @@ namespace CapaPresentacion
         private void frmPaginaPrincipal_Load(object sender, EventArgs e)
         {
             dgvEquiposUsuario.DataSource = ObjGestionEquipos.mtdListarEquiposPorUsuarioCD(IDCreador);
-            dgvEquiposUsuario.Columns["IDEquipo"].Visible = false;
+            
+            if (dgvEquiposUsuario.DataSource != null && dgvEquiposUsuario.Columns.Contains("IDEquipo"))
+            {
+                dgvEquiposUsuario.Columns["IDEquipo"].Visible = false;
+            }
         }
 
         private void btnCrearEquipo_Click(object sender, EventArgs e)

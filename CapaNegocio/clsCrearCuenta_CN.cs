@@ -12,6 +12,7 @@ namespace CapaNegocio
     {
         private clsCrearCuenta_CD ObjCrearCuenta = new clsCrearCuenta_CD();
 
+        //METODO PARA CREAR UN CUENTA
         public void mtdCrearCuentaCN(string Nombres,
                                      string ApellidoPaterno,
                                      string ApellidoMaterno,
@@ -38,6 +39,7 @@ namespace CapaNegocio
                                             Clave);
         }
 
+        //METODO PARA LISTAR TODOS LOS TIPOS DE DATOS
         public DataTable mtdListarTipoDocumentoActivosCD()
         {
             DataTable tbTipoDocumento = new DataTable();

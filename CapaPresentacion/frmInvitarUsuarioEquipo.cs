@@ -14,18 +14,21 @@ namespace CapaPresentacion
     public partial class frmInvitarUsuarioEquipo : Form
     {
         private clsUsuario_CN ObjUsuario = new clsUsuario_CN();
+        private clsGestionEquipos_CN ObjGestionEquipos = new clsGestionEquipos_CN();
 
         int IDUsuarioActual = clsSesionUsuario_CN.idUsuario;
         
         //VARIABLE GLOBAL PARA USARLA EN TODO EL FORMULARIO
-        private string IDEquipo_;
+        private int IDEquipo_;
+        private int IDUsuarioInvitado;
+        private int IdUsuarioActual = clsSesionUsuario_CN.idUsuario;
 
         //INICIAMOS EL FORMULARIO PASANDO EL VALOR DEL IDEQUIPO
         public frmInvitarUsuarioEquipo(string IDEquipo)
         {
             InitializeComponent();
-            IDEquipo_ = IDEquipo;
-            txtEquipo.Text = IDEquipo_;
+            IDEquipo_ = int.Parse(IDEquipo);
+            txtEquipo.Text = IDEquipo_.ToString();
         }
 
         private void frmInvitarUsuarioEquipo_Load(object sender, EventArgs e)
@@ -48,8 +51,14 @@ namespace CapaPresentacion
                 if (row.Index == e.RowIndex)
                 {
                     txtUsuarioInvitado.Text = row.Cells["IDUsuario"].Value.ToString();
+                    IDUsuarioInvitado = Convert.ToInt32(row.Cells["IDUsuario"].Value.ToString());
                 }
             }
+        }
+
+        private void btnInvitar_Click(object sender, EventArgs e)
+        {
+            ObjGestionEquipos.mtdInvitarUsuarioEquipo_CN(IDEquipo_, IDUsuarioInvitado, IdUsuarioActual);
         }
     }
 }

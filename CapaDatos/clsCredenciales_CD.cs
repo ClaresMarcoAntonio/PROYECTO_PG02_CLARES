@@ -38,6 +38,7 @@ namespace CapaDatos
             }
         }
 
+        //OBTENER LOS DATOS DEL USUARIO
         public (int idUsuario, string nombreUsuario) mtdObtenerUsuarioCD(string NombreUsuario, string Clave)
         {
             using (SqlConnection connection = clsConexion_CD.mtdObtenerConexion())

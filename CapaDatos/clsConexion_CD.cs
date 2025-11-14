@@ -9,7 +9,7 @@ namespace CapaDatos
 {
     public static class clsConexion_CD
     {
-        private static readonly string connectionString = @"server = DESKTOP-O13P0GC; 
+        private static readonly string connectionString = @"server = David; 
                                                             database= PRUEBADEPORTE; 
                                                             integrated security = true";
 
